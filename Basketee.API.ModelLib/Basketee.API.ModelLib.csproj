@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C504DC1-92C3-4429-BF6C-89E1B8B3D83E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pertamina.LPG.API</RootNamespace>
+    <AssemblyName>Pertamina.LPG.API.ModelLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.4.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAOs\AgencyDao.cs" />
+    <Compile Include="DAOs\AgentAdminDao.cs" />
+    <Compile Include="DAOs\AgentBossDao.cs" />
+    <Compile Include="DAOs\ConsumerReviewDao.cs" />
+    <Compile Include="DAOs\ContactInfoDao.cs" />
+    <Compile Include="DAOs\DAO.cs" />
+    <Compile Include="DAOs\DeliverySlotDao.cs" />
+    <Compile Include="DAOs\DistrictDao.cs" />
+    <Compile Include="DAOs\DriverDao.cs" />
+    <Compile Include="DAOs\FAQDao.cs" />
+    <Compile Include="DAOs\InvoiceNumberDao.cs" />
+    <Compile Include="DAOs\NotificationLogDao.cs" />
+    <Compile Include="DAOs\OneTimePwdDao.cs" />
+    <Compile Include="DAOs\OrderDao.cs" />
+    <Compile Include="DAOs\OrderDeliveryDao.cs" />
+    <Compile Include="DAOs\ProductDao.cs" />
+    <Compile Include="DAOs\PromoDao.cs" />
+    <Compile Include="DAOs\SuperUserDao.cs" />
+    <Compile Include="DAOs\TeleOrderCustomerDao.cs" />
+    <Compile Include="DAOs\TeleOrderDao.cs" />
+    <Compile Include="DAOs\UserDao.cs" />
+    <Compile Include="Models\AccessControl.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityLog.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agency.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentAdmin.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentBoss.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Consumer.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConsumerAddress.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConsumerReview.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConsumerReviewReason.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactInfo.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DistributionPoint.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Driver.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DriverNotificationLog.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAgencyDetailsbyOrderIdForSUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllDriversForAgentAdmin_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllDriversForTheOrder_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllOrdersByAgentAdmin_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllOrdersByAgentBoss_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAvailabeDriversForTheOrder_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetDistribution_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetDriversByAgentBoss_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetIssuesListForSUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetOrderDeatilsbyOrderIdForSUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetOrderList_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetProductDeatilsbyOrderIdForSUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetProductsByAgentBoss_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetReviewReasonByAgentBoss_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetReviewReasonBySUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetReviewReportByAgentBoss_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetReviewReportBySUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetSellerRatingBySuperAdmin_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetSellerReportByAgentBoss_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetSellerReportBySuperAdmin_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetSellerReportBySUser_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceNumber.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MDeliverySlot.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MDeliveryStatu.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MFaq.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MFunctionality.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MModule.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MOrderStatu.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MRegion.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSuperUserType.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationLog.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OneTimePwd.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderAllocationLog.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDelivery.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderPrdocuctExchange.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PertaminaLpgModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PertaminaLpgModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PertaminaLpgModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PertaminaLpgModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PertaminaLpgModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductExchange.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PromoBanner.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PromoInfo.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reminder.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SplitString_Result.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SuperAdmin.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeleCustomer.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeleOrder.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeleOrderDelivery.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeleOrderDetail.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeleOrderPrdocuctExchange.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp.cs">
+      <DependentUpon>PertaminaLpgModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Models\PertaminaLpgModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PertaminaLpgModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\PertaminaLpgModel.edmx.diagram">
+      <DependentUpon>PertaminaLpgModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\PertaminaLpgModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PertaminaLpgModel.edmx</DependentUpon>
+      <LastGenOutput>PertaminaLpgModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\PertaminaLpgModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PertaminaLpgModel.edmx</DependentUpon>
+      <LastGenOutput>PertaminaLpgModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basketee.API.Util\Basketee.LPG.API.Util.csproj">
+      <Project>{419a1c9d-e2b2-4938-9fcf-b63c29aadbeb}</Project>
+      <Name>Basketee.LPG.API.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

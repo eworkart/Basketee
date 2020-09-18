@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F19F3991-92F3-475E-A887-9E0492B14F41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pertamina.LPG.API</RootNamespace>
+    <AssemblyName>Pertamina.LPG.API.ServicesLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.4.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SMTPServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\AgentBoss\AgentBossDetailsDto.cs" />
+    <Compile Include="DTOs\AgentBoss\AgentBossLoginDto.cs" />
+    <Compile Include="DTOs\AgentBoss\AgentBossMoreDetailsDto.cs" />
+    <Compile Include="DTOs\AgentBoss\ChangePasswordAgentBossRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\ChangeProfileAgentBossRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\CheckOtpRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\ForgotPasswordRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\ForgotPasswordResponse.cs" />
+    <Compile Include="DTOs\AgentBoss\GetAgentBossDetailsRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\GetAgentBossDetailsResponse.cs" />
+    <Compile Include="DTOs\AgentBoss\LoginRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\LoginResponse.cs" />
+    <Compile Include="DTOs\AgentBoss\OtpDetailsDto.cs" />
+    <Compile Include="DTOs\AgentBoss\ResendOtpRequest.cs" />
+    <Compile Include="DTOs\AgentBoss\ResendOtpResponse.cs" />
+    <Compile Include="DTOs\AgentBoss\ResetPasswordDto.cs" />
+    <Compile Include="DTOs\AgentBoss\ResetPasswordRequest.cs" />
+    <Compile Include="DTOs\Agent\AgentAdminDetailsDto.cs" />
+    <Compile Include="DTOs\Agent\ChangePasswordAgentAdminRequest.cs" />
+    <Compile Include="DTOs\Agent\ChangeProfileAgentAdminRequest.cs" />
+    <Compile Include="DTOs\Agent\CheckOtpRequest.cs" />
+    <Compile Include="DTOs\Agent\ForgotPasswordRequest.cs" />
+    <Compile Include="DTOs\Agent\ForgotPasswordResponse.cs" />
+    <Compile Include="DTOs\Agent\GetAgentAdminDetailsRequest.cs" />
+    <Compile Include="DTOs\Agent\GetAgentAdminDetailsResponse.cs" />
+    <Compile Include="DTOs\Agent\LoginRequest.cs" />
+    <Compile Include="DTOs\Agent\LoginResponse.cs" />
+    <Compile Include="DTOs\Agent\ResendOtpRequest.cs" />
+    <Compile Include="DTOs\Agent\ResendOtpResponse.cs" />
+    <Compile Include="DTOs\Agent\ResetPasswordDto.cs" />
+    <Compile Include="DTOs\Agent\ResetPasswordRequest.cs" />
+    <Compile Include="DTOs\Agent\TestEmailRequest.cs" />
+    <Compile Include="DTOs\Agent\TestPushNotificationRequest.cs" />
+    <Compile Include="DTOs\Agent\UserLoginDto.cs" />
+    <Compile Include="DTOs\AuthBase.cs" />
+    <Compile Include="DTOs\Driver\ChangePasswordDriverRequest.cs" />
+    <Compile Include="DTOs\Driver\CheckOtpRequest.cs" />
+    <Compile Include="DTOs\Driver\DriverDetailListDto.cs" />
+    <Compile Include="DTOs\Driver\DriverDetails.cs" />
+    <Compile Include="DTOs\Driver\DriverDetailsDto.cs" />
+    <Compile Include="DTOs\Driver\ForgotPasswordRequest.cs" />
+    <Compile Include="DTOs\Driver\ForgotPasswordResponse.cs" />
+    <Compile Include="DTOs\Driver\GetAgentDriverRequest.cs" />
+    <Compile Include="DTOs\Driver\GetAgentDriverResponse.cs" />
+    <Compile Include="DTOs\Driver\GetEReceiptRequest.cs" />
+    <Compile Include="DTOs\Driver\GetEReceiptResponse.cs" />
+    <Compile Include="DTOs\Driver\LoginRequest.cs" />
+    <Compile Include="DTOs\Driver\LoginResponse.cs" />
+    <Compile Include="DTOs\Driver\OrderInvoiceDto.cs" />
+    <Compile Include="DTOs\Driver\OtpDetailsDto.cs" />
+    <Compile Include="DTOs\Driver\ProductsDto.cs" />
+    <Compile Include="DTOs\Driver\ReminderDetailsDto.cs" />
+    <Compile Include="DTOs\Driver\ResendOtpRequest.cs" />
+    <Compile Include="DTOs\Driver\ResendOtpResponse.cs" />
+    <Compile Include="DTOs\Driver\ResetPasswordDto.cs" />
+    <Compile Include="DTOs\Driver\ResetPasswordRequest.cs" />
+    <Compile Include="DTOs\Driver\UpdateProfileRequest.cs" />
+    <Compile Include="DTOs\Driver\UpdateProfileResponse.cs" />
+    <Compile Include="DTOs\Driver\UserDriverDto.cs" />
+    <Compile Include="DTOs\Driver\UserLoginDto.cs" />
+    <Compile Include="DTOs\Driver\UserReminderDto.cs" />
+    <Compile Include="DTOs\Gen\ChangeProfilePhotoRequest.cs" />
+    <Compile Include="DTOs\Gen\ContactDto.cs" />
+    <Compile Include="DTOs\Gen\DistrictDetailsDto.cs" />
+    <Compile Include="DTOs\Gen\FAQDto.cs" />
+    <Compile Include="DTOs\Gen\ForgotPasswordRequest.cs" />
+    <Compile Include="DTOs\Gen\GetAllResponse.cs" />
+    <Compile Include="DTOs\Gen\GetContactResponse.cs" />
+    <Compile Include="DTOs\Gen\GetDistrictResponse.cs" />
+    <Compile Include="DTOs\Gen\GetFAQRequest.cs" />
+    <Compile Include="DTOs\Gen\ForgotPasswordDto.cs" />
+    <Compile Include="DTOs\Gen\ForgotPasswordResponse.cs" />
+    <Compile Include="DTOs\Gen\OTPDetailsDto.cs" />
+    <Compile Include="DTOs\Gen\ResendOTPRequest.cs" />
+    <Compile Include="DTOs\Gen\ResendOtpResponse.cs" />
+    <Compile Include="DTOs\Gen\SentOTPResponseFromService.cs" />
+    <Compile Include="DTOs\KeyValueBase.cs" />
+    <Compile Include="DTOs\OrderPickup\ConfirmPickupOrderRequest.cs" />
+    <Compile Include="DTOs\OrderPickup\ConfirmPickupOrderResponse.cs" />
+    <Compile Include="DTOs\OrderPickup\PickupOrderDto.cs" />
+    <Compile Include="DTOs\OrderPickup\PickupOrderExchangeDto.cs" />
+    <Compile Include="DTOs\OrderPickup\PickupOrderResponseDto.cs" />
+    <Compile Include="DTOs\OrderPickup\PlaceOrderPickupRequest.cs" />
+    <Compile Include="DTOs\OrderPickup\PlaceOrderPickupResponse.cs" />
+    <Compile Include="DTOs\Orders\ActiveOrdersBossDto.cs" />
+    <Compile Include="DTOs\Orders\ActiveOrdersDto.cs" />
+    <Compile Include="DTOs\Orders\AgencyDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\AgentAdminInvoiceMailSendRequest.cs" />
+    <Compile Include="DTOs\Orders\AllOrderDetails.cs" />
+    <Compile Include="DTOs\Orders\AssignedOrderCountDto.cs" />
+    <Compile Include="DTOs\Orders\CancelOrderRequest.cs" />
+    <Compile Include="DTOs\Orders\CloseOrderDto.cs" />
+    <Compile Include="DTOs\Orders\CloseOrderRequest.cs" />
+    <Compile Include="DTOs\Orders\CloseOrderResponse.cs" />
+    <Compile Include="DTOs\Orders\ConfirmOrderRequest.cs" />
+    <Compile Include="DTOs\Orders\ConfirmOrderResponse.cs" />
+    <Compile Include="DTOs\Orders\DriverDetailListDto.cs" />
+    <Compile Include="DTOs\Orders\DriverDetailsBossDto.cs" />
+    <Compile Include="DTOs\Orders\DriverDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\DriverDto.cs" />
+    <Compile Include="DTOs\Orders\DriverOrderDetails1Dto.cs" />
+    <Compile Include="DTOs\Orders\DriverOrderDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\DriverProductsDto.cs" />
+    <Compile Include="DTOs\Orders\AllDriversForAdmin.cs" />
+    <Compile Include="DTOs\Orders\ExchangeDto.cs" />
+    <Compile Include="DTOs\Orders\ForcedCancelOrderSuserRequest.cs" />
+    <Compile Include="DTOs\Orders\GetActiveOrderCountBossRequest.cs" />
+    <Compile Include="DTOs\Orders\GetActiveOrderCountBossResponse.cs" />
+    <Compile Include="DTOs\Orders\GetActiveOrderCountRequest.cs" />
+    <Compile Include="DTOs\Orders\GetActiveOrderCountResponse.cs" />
+    <Compile Include="DTOs\Orders\GetAllOrderDetailsRequest.cs" />
+    <Compile Include="DTOs\Orders\GetAllOrderDetailsResponse.cs" />
+    <Compile Include="DTOs\Orders\GetAllUnAssignedOrdersRequest.cs" />
+    <Compile Include="DTOs\Orders\GetAllUnassignedOrdersResponse.cs" />
+    <Compile Include="DTOs\Orders\GetAssignedOrderCountRequest.cs" />
+    <Compile Include="DTOs\Orders\GetAssignedOrderCountResponse.cs" />
+    <Compile Include="DTOs\Orders\GetDriverDetailsRequest.cs" />
+    <Compile Include="DTOs\Orders\GetDriverDetailsResponse.cs" />
+    <Compile Include="DTOs\Orders\GetDriverListForAgentAdminRequest.cs" />
+    <Compile Include="DTOs\Orders\GetDriverListForAgentAdminResponse.cs" />
+    <Compile Include="DTOs\Orders\GetDriverListRequest.cs" />
+    <Compile Include="DTOs\Orders\GetDriverListResponse.cs" />
+    <Compile Include="DTOs\Orders\GetDriverOrderListRequest.cs" />
+    <Compile Include="DTOs\Orders\GetDriverOrderListResponse.cs" />
+    <Compile Include="DTOs\Orders\GetDriverOrderRequest.cs" />
+    <Compile Include="DTOs\Orders\GetDriverOrderResponse.cs" />
+    <Compile Include="DTOs\Orders\GetEReceiptRequest.cs" />
+    <Compile Include="DTOs\Orders\GetEReceiptResponse.cs" />
+    <Compile Include="DTOs\Orders\GetInvoiceDetailsRequest.cs" />
+    <Compile Include="DTOs\Orders\GetInvoiceDetailsResponse.cs" />
+    <Compile Include="DTOs\Orders\GetIssueDetailsRequest.cs" />
+    <Compile Include="DTOs\Orders\GetIssueDetailsRequestSUsers.cs" />
+    <Compile Include="DTOs\Orders\GetIssueDetailsResponse.cs" />
+    <Compile Include="DTOs\Orders\GetIssueDetailsResponseSUsers.cs" />
+    <Compile Include="DTOs\Orders\GetIssuesCountRequest.cs" />
+    <Compile Include="DTOs\Orders\GetIssuesCountResponse.cs" />
+    <Compile Include="DTOs\Orders\GetIssuesListRequest.cs" />
+    <Compile Include="DTOs\Orders\GetIssuesListResponse.cs" />
+    <Compile Include="DTOs\Orders\GetOrderDetailsBossRequest.cs" />
+    <Compile Include="DTOs\Orders\GetOrderDetailsBossResponse.cs" />
+    <Compile Include="DTOs\Orders\GetOrderDetailsRequest.cs" />
+    <Compile Include="DTOs\Orders\GetOrderDetailsResponse.cs" />
+    <Compile Include="DTOs\Orders\GetOrderListBossRequest.cs" />
+    <Compile Include="DTOs\Orders\GetOrderListBossResponse.cs" />
+    <Compile Include="DTOs\Orders\GetOrderListRequest.cs" />
+    <Compile Include="DTOs\Orders\GetOrderListResponse.cs" />
+    <Compile Include="DTOs\Orders\GetOrgOrderDetailsRequest.cs" />
+    <Compile Include="DTOs\Orders\GetOrgOrderDetailsResponse.cs" />
+    <Compile Include="DTOs\Orders\GetOrgOrderListRequest.cs" />
+    <Compile Include="DTOs\Orders\GetOrgOrderListResponse.cs" />
+    <Compile Include="DTOs\Orders\GetTimeslotRequest.cs" />
+    <Compile Include="DTOs\Orders\GetTimeSlotResponse.cs" />
+    <Compile Include="DTOs\Orders\GetUnassignedOrdersRequest.cs" />
+    <Compile Include="DTOs\Orders\GetUnassignedOrdersResponse.cs" />
+    <Compile Include="DTOs\Orders\OrderCountDto.cs" />
+    <Compile Include="DTOs\Orders\IssueCountDto.cs" />
+    <Compile Include="DTOs\Orders\IssueDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\OrderDetailsBossDto.cs" />
+    <Compile Include="DTOs\Orders\OrderDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\OrderFullDetailsBossDto.cs" />
+    <Compile Include="DTOs\Orders\OrdersBossDto.cs" />
+    <Compile Include="DTOs\Orders\OutForDeliveryDto.cs" />
+    <Compile Include="DTOs\Orders\OutForDeliveryRequest.cs" />
+    <Compile Include="DTOs\Orders\OutForDeliveryResponse.cs" />
+    <Compile Include="DTOs\Orders\PlaceOrderRespOrderDto.cs" />
+    <Compile Include="DTOs\Orders\OrderFullDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\OrderDto.cs" />
+    <Compile Include="DTOs\Orders\OrderInvoiceDto.cs" />
+    <Compile Include="DTOs\Orders\OrgOrderListDto - Copy.cs" />
+    <Compile Include="DTOs\Orders\OrgOrderListDto.cs" />
+    <Compile Include="DTOs\Orders\OrdersDto.cs" />
+    <Compile Include="DTOs\Orders\PlaceOrderRequest.cs" />
+    <Compile Include="DTOs\Orders\PlaceOrderResponse.cs" />
+    <Compile Include="DTOs\Orders\ProductDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\ProductsBossDto.cs" />
+    <Compile Include="DTOs\Orders\ProductsDto.cs" />
+    <Compile Include="DTOs\Orders\SendEmailRequest.cs" />
+    <Compile Include="DTOs\Orders\SubmitReviewRequest.cs" />
+    <Compile Include="DTOs\Orders\SUserAgencyDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\SUserProductDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\SUserOrderDetailsDto.cs" />
+    <Compile Include="DTOs\Orders\TimeslotDaysDto.cs" />
+    <Compile Include="DTOs\Orders\TimeslotDisplayDto.cs" />
+    <Compile Include="DTOs\Orders\TimeSlotDto.cs" />
+    <Compile Include="DTOs\Products\AddProductRequest.cs" />
+    <Compile Include="DTOs\Products\DeleteProductRequest.cs" />
+    <Compile Include="DTOs\Products\ExchangeDto.cs" />
+    <Compile Include="DTOs\Products\GetProductDetailsRequest.cs" />
+    <Compile Include="DTOs\Products\GetProductDetailsResponse.cs" />
+    <Compile Include="DTOs\Products\GetProductListRequest.cs" />
+    <Compile Include="DTOs\Products\GetProductListResponse.cs" />
+    <Compile Include="DTOs\Products\ProductDetailsDto.cs" />
+    <Compile Include="DTOs\Products\ProductPagenationDetailsDto.cs" />
+    <Compile Include="DTOs\Products\ProductsDto.cs" />
+    <Compile Include="DTOs\Products\UpdateProductRequest.cs" />
+    <Compile Include="DTOs\Promo\AddBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\AddInfoBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\BannerDto.cs" />
+    <Compile Include="DTOs\Promo\DeleteBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\DeleteInfoBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\GetBannerInfoListResponse.cs" />
+    <Compile Include="DTOs\Promo\GetBannerListRequest.cs" />
+    <Compile Include="DTOs\Promo\GetBannerListResponse.cs" />
+    <Compile Include="DTOs\Promo\GetBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\GetBannerResponse.cs" />
+    <Compile Include="DTOs\Promo\GetInfoBannerListRequest.cs" />
+    <Compile Include="DTOs\Promo\GetInfoBannerListResponse.cs" />
+    <Compile Include="DTOs\Promo\GetInfoBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\GetInfoBannerResponse.cs" />
+    <Compile Include="DTOs\Promo\InfoBannerDto.cs" />
+    <Compile Include="DTOs\Promo\InfoBannerListDto.cs" />
+    <Compile Include="DTOs\Promo\InfoBannerResponse.cs" />
+    <Compile Include="DTOs\Promo\UpdateBannerRequest.cs" />
+    <Compile Include="DTOs\Promo\UpdateInfoBannerRequest.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReportFloatDto.cs" />
+    <Compile Include="DTOs\Reports\ABossReportKeyValueResponseFloatDto.cs" />
+    <Compile Include="DTOs\Reports\AgentBossReportSellerOnTimeRequest.cs" />
+    <Compile Include="DTOs\Reports\GetReportToEmailRequest.cs" />
+    <Compile Include="DTOs\Reports\SellerReportDeliveredRequests.cs" />
+    <Compile Include="DTOs\Reports\ProductInputDto.cs" />
+    <Compile Include="DTOs\Reports\SUserSellerRptDto.cs" />
+    <Compile Include="DTOs\Reports\SUserSellerRptRequest.cs" />
+    <Compile Include="DTOs\Reports\SUserSellerRptResponse.cs" />
+    <Compile Include="DTOs\Reports\SUserReviewReasonDto.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReasonDto.cs" />
+    <Compile Include="DTOs\Reports\SUserReviewReasonRequest.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReasonRequest.cs" />
+    <Compile Include="DTOs\Reports\SUserReviewReasonResponse.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReasonResponse.cs" />
+    <Compile Include="DTOs\Reports\SUserReviewReportResponse.cs" />
+    <Compile Include="DTOs\Reports\SUserReviewReportDto.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReportDto.cs" />
+    <Compile Include="DTOs\Reports\SUserReviewReportRequest.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReportRequest.cs" />
+    <Compile Include="DTOs\Reports\ABossReviewReportResponse.cs" />
+    <Compile Include="DTOs\Reports\ABossSellerRptDto.cs" />
+    <Compile Include="DTOs\Reports\ABossSellerRptRequest.cs" />
+    <Compile Include="DTOs\Reports\ABossSellerRptResponse.cs" />
+    <Compile Include="DTOs\Reports\GetAgencyNameDto.cs" />
+    <Compile Include="DTOs\Reports\GetAgencyNameRequest.cs" />
+    <Compile Include="DTOs\Reports\GetAgencyNameResponse.cs" />
+    <Compile Include="DTOs\Reports\GetDriverNameDto.cs" />
+    <Compile Include="DTOs\Reports\GetDriverNameRequest.cs" />
+    <Compile Include="DTOs\Reports\GetDriverNameResponse.cs" />
+    <Compile Include="DTOs\Reports\GetProductRequest.cs" />
+    <Compile Include="DTOs\Reports\GetProductResponse.cs" />
+    <Compile Include="DTOs\Reports\GetProductsDto.cs" />
+    <Compile Include="DTOs\ResponseDto.cs" />
+    <Compile Include="DTOs\SuperUser\ChangePasswordSuperUserRequest.cs" />
+    <Compile Include="DTOs\SuperUser\ChangeProfileSuperUserRequest.cs" />
+    <Compile Include="DTOs\SuperUser\CheckOTPRequest.cs" />
+    <Compile Include="DTOs\SuperUser\ForgotPasswordRequest.cs" />
+    <Compile Include="DTOs\SuperUser\ForgotPasswordResponse.cs" />
+    <Compile Include="DTOs\SuperUser\GetSuperUserDetailsRequest.cs" />
+    <Compile Include="DTOs\SuperUser\GetSuperUserDetailsResponse.cs" />
+    <Compile Include="DTOs\SuperUser\LoginRequest.cs" />
+    <Compile Include="DTOs\SuperUser\LoginResponse.cs" />
+    <Compile Include="DTOs\SuperUser\OtpDetailsDto.cs" />
+    <Compile Include="DTOs\SuperUser\ResendOtpRequest.cs" />
+    <Compile Include="DTOs\SuperUser\ResendOtpResponse.cs" />
+    <Compile Include="DTOs\SuperUser\ResetPasswordDto.cs" />
+    <Compile Include="DTOs\SuperUser\ResetPasswordRequest.cs" />
+    <Compile Include="DTOs\SuperUser\SuperUserLoginDetailsDto.cs" />
+    <Compile Include="DTOs\SuperUser\SuperUserDetailsDto.cs" />
+    <Compile Include="DTOs\SuperUser\SuperUserLoginDto.cs" />
+    <Compile Include="DTOs\TeleOrder\AddTeleOrderRequest.cs" />
+    <Compile Include="DTOs\TeleOrder\AddTeleOrderResponse.cs" />
+    <Compile Include="DTOs\TeleOrder\ConfirmTeleOrderRequest.cs" />
+    <Compile Include="DTOs\TeleOrder\ConfirmTeleOrderResponse.cs" />
+    <Compile Include="DTOs\TeleOrder\CustomerDetailsDto.cs" />
+    <Compile Include="DTOs\TeleOrder\TeleOrderDto.cs" />
+    <Compile Include="DTOs\TeleOrder\TeleOrderFullDetailsDto.cs" />
+    <Compile Include="DTOs\Users\ActivateUserRequest.cs" />
+    <Compile Include="DTOs\Users\AddAddressRequest.cs" />
+    <Compile Include="DTOs\Users\ChangePasswordRequest.cs" />
+    <Compile Include="DTOs\Users\CheckOtpRequest.cs" />
+    <Compile Include="DTOs\Users\DeleteAddressRequest.cs" />
+    <Compile Include="DTOs\Users\ForgotPasswordRequest.cs" />
+    <Compile Include="DTOs\Users\ForgotPasswordResponse.cs" />
+    <Compile Include="DTOs\Users\GetAddressesRequest.cs" />
+    <Compile Include="DTOs\Users\GetAddressesResponse.cs" />
+    <Compile Include="DTOs\Users\GetAddressRequest.cs" />
+    <Compile Include="DTOs\Users\GetAddressResponse.cs" />
+    <Compile Include="DTOs\Users\GetUserDetailsRequest.cs" />
+    <Compile Include="DTOs\Users\GetUserDetailsResponse.cs" />
+    <Compile Include="DTOs\Users\LoginRequest.cs" />
+    <Compile Include="DTOs\Users\LoginResponse.cs" />
+    <Compile Include="DTOs\Users\NewUserDto.cs" />
+    <Compile Include="DTOs\Users\OtpDetailsDto.cs" />
+    <Compile Include="DTOs\Users\RegisterRequest.cs" />
+    <Compile Include="DTOs\Users\RegisterResponse.cs" />
+    <Compile Include="DTOs\Users\ResendOtpRequest.cs" />
+    <Compile Include="DTOs\Users\ResendOtpResponse.cs" />
+    <Compile Include="DTOs\Users\ResetPasswordDto.cs" />
+    <Compile Include="DTOs\Users\ResetPasswordRequest.cs" />
+    <Compile Include="DTOs\Users\UpdateAddressRequest.cs" />
+    <Compile Include="DTOs\Users\UpdateDeviceTokenRequest.cs" />
+    <Compile Include="DTOs\Users\UpdateProfileRequest.cs" />
+    <Compile Include="DTOs\Users\UserAddressesDto.cs" />
+    <Compile Include="DTOs\Users\UserDetailsDto.cs" />
+    <Compile Include="DTOs\Users\UserExistsRequest.cs" />
+    <Compile Include="DTOs\Users\UserExistsResponse.cs" />
+    <Compile Include="DTOs\Users\UserLoginDetailsDto.cs" />
+    <Compile Include="DTOs\Users\UserLoginDto.cs" />
+    <Compile Include="DTOs\Users\UserReminderDto.cs" />
+    <Compile Include="DTOs\Users\UserStatusDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AgencyOrderAlertService.cs" />
+    <Compile Include="Services\AgencyService.cs" />
+    <Compile Include="Services\AgentAdminServices.cs" />
+    <Compile Include="Services\AgentBossServices.cs" />
+    <Compile Include="Services\ContactServices.cs" />
+    <Compile Include="Services\DistrictServices.cs" />
+    <Compile Include="Services\DriverServices.cs" />
+    <Compile Include="Services\EmailServices.cs" />
+    <Compile Include="Services\Extensions\StringExtensions.cs" />
+    <Compile Include="Services\Extensions\TypeExtensions.cs" />
+    <Compile Include="Services\FaqServices.cs" />
+    <Compile Include="Services\Helpers\AgentBossHelper.cs" />
+    <Compile Include="Services\Helpers\AgentHelper.cs" />
+    <Compile Include="Services\Helpers\DriverHelper.cs" />
+    <Compile Include="Services\Helpers\OrderPickupHelper.cs" />
+    <Compile Include="Services\Helpers\OrdersHelper.cs" />
+    <Compile Include="Services\Helpers\ProductHelper.cs" />
+    <Compile Include="Services\Helpers\PromoHelper.cs" />
+    <Compile Include="Services\Helpers\SuperUserHelper.cs" />
+    <Compile Include="Services\Helpers\ReportsHelper.cs" />
+    <Compile Include="Services\Helpers\TeleOrderHelper.cs" />
+    <Compile Include="Services\Helpers\UsersHelper.cs" />
+    <Compile Include="Services\ImagePathService.cs" />
+    <Compile Include="Services\InvoiceService.cs" />
+    <Compile Include="Services\MessagesSource.cs" />
+    <Compile Include="Services\OrderPickupServices.cs" />
+    <Compile Include="Services\OrdersServices.cs" />
+    <Compile Include="Services\OTPServices.cs" />
+    <Compile Include="Services\PdfServices.cs" />
+    <Compile Include="Services\ProductServices.cs" />
+    <Compile Include="Services\PromoServices.cs" />
+    <Compile Include="Services\PushMessagingService.cs" />
+    <Compile Include="Services\ReportsServices.cs" />
+    <Compile Include="Services\SMSService.cs" />
+    <Compile Include="Services\SuperUserServices.cs" />
+    <Compile Include="Services\TeleOrderServices.cs" />
+    <Compile Include="Services\TimeslotService.cs" />
+    <Compile Include="Services\TokenGenerator.cs" />
+    <Compile Include="Services\UserServices.cs" />
+    <Compile Include="Services\Utilities\Common.cs" />
+    <Compile Include="Web References\PertaminaServices\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basketee.API.ModelLib\Basketee.API.ModelLib.csproj">
+      <Project>{5c504dc1-92c3-4429-bf6c-89e1b8b3d83e}</Project>
+      <Name>Basketee.API.ModelLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Basketee.API.Util\Basketee.LPG.API.Util.csproj">
+      <Project>{419a1c9d-e2b2-4938-9fcf-b63c29aadbeb}</Project>
+      <Name>Basketee.LPG.API.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\SMTPServices\Pertamina.LPG.API.SMTPServices.CommonResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SMTPServices\Service1.wsdl" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PertaminaServices\Reference.map" />
+    <None Include="Web References\PertaminaServices\svc_ms2mobile.wsdl" />
+    <None Include="Web References\PertaminaServices\TestEntity.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PertaminaServices\" />
+    <WCFMetadataStorage Include="Connected Services\SMTPServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PertaminaServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PertaminaServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PertaminaServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SMTPServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SMTPServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SMTPServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

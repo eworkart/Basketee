@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendOTPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListLO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListLOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListLOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderBBM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderBBMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderBBMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMasterShift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMasterShiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMasterShiftResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportStockResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestSendOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dat" type="tns:DataRandomNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DataRandomNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NoSPBU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoTelp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestSendOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestSendOTPResult" type="tns:TestEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TestEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EncryptedKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strJSON" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestGetMasterShift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dat" type="tns:GetMasterShift" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetMasterShift">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StationNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaterialCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestGetMasterShiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestGetMasterShiftResult" type="tns:TestEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestGetListLO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dat" type="tns:DataGetListLo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DataGetListLo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="stationNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="delivenum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gistatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastUpdate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestGetListLOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestGetListLOResult" type="tns:TestEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestGetProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dat" type="tns:DataProduct" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DataProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NoSPBU" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestGetProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestGetProductResult" type="tns:TestEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestReportStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="tns:ReportStockEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReportStockEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="noSPBU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="liStok" type="tns:ArrayOfMaterialStok" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMaterialStok">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MaterialStok" nillable="true" type="tns:MaterialStok" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MaterialStok">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="materialCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="stok" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestReportStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestReportStockResult" type="tns:TestEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOrderBBM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="tns:OrderBBMEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderBBMEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="noSPBU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="liStok" type="tns:ArrayOfMaterialStok" />
+          <s:element minOccurs="0" maxOccurs="1" name="liOrder" type="tns:ArrayOfMaterialShiftLoQty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMaterialShiftLoQty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MaterialShiftLoQty" nillable="true" type="tns:MaterialShiftLoQty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MaterialShiftLoQty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="materialCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="shift" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="deliv_Numb" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestOrderBBMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestOrderBBMResult" type="tns:TestEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:SendOTP" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:SendOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListLOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListLO" />
+  </wsdl:message>
+  <wsdl:message name="GetListLOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListLOResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrderBBMSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderBBM" />
+  </wsdl:message>
+  <wsdl:message name="OrderBBMSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderBBMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMasterShiftSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMasterShift" />
+  </wsdl:message>
+  <wsdl:message name="GetMasterShiftSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMasterShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportStockSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportStock" />
+  </wsdl:message>
+  <wsdl:message name="ReportStockSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetProductSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSendOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:TestSendOTP" />
+  </wsdl:message>
+  <wsdl:message name="TestSendOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:TestSendOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestGetMasterShiftSoapIn">
+    <wsdl:part name="parameters" element="tns:TestGetMasterShift" />
+  </wsdl:message>
+  <wsdl:message name="TestGetMasterShiftSoapOut">
+    <wsdl:part name="parameters" element="tns:TestGetMasterShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestGetListLOSoapIn">
+    <wsdl:part name="parameters" element="tns:TestGetListLO" />
+  </wsdl:message>
+  <wsdl:message name="TestGetListLOSoapOut">
+    <wsdl:part name="parameters" element="tns:TestGetListLOResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestGetProductSoapIn">
+    <wsdl:part name="parameters" element="tns:TestGetProduct" />
+  </wsdl:message>
+  <wsdl:message name="TestGetProductSoapOut">
+    <wsdl:part name="parameters" element="tns:TestGetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestReportStockSoapIn">
+    <wsdl:part name="parameters" element="tns:TestReportStock" />
+  </wsdl:message>
+  <wsdl:message name="TestReportStockSoapOut">
+    <wsdl:part name="parameters" element="tns:TestReportStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestOrderBBMSoapIn">
+    <wsdl:part name="parameters" element="tns:TestOrderBBM" />
+  </wsdl:message>
+  <wsdl:message name="TestOrderBBMSoapOut">
+    <wsdl:part name="parameters" element="tns:TestOrderBBMResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SVC_MS2MobileSoap">
+    <wsdl:operation name="SendOTP">
+      <wsdl:input message="tns:SendOTPSoapIn" />
+      <wsdl:output message="tns:SendOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLO">
+      <wsdl:input message="tns:GetListLOSoapIn" />
+      <wsdl:output message="tns:GetListLOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderBBM">
+      <wsdl:input message="tns:OrderBBMSoapIn" />
+      <wsdl:output message="tns:OrderBBMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterShift">
+      <wsdl:input message="tns:GetMasterShiftSoapIn" />
+      <wsdl:output message="tns:GetMasterShiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportStock">
+      <wsdl:input message="tns:ReportStockSoapIn" />
+      <wsdl:output message="tns:ReportStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input message="tns:GetProductSoapIn" />
+      <wsdl:output message="tns:GetProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestSendOTP">
+      <wsdl:input message="tns:TestSendOTPSoapIn" />
+      <wsdl:output message="tns:TestSendOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestGetMasterShift">
+      <wsdl:input message="tns:TestGetMasterShiftSoapIn" />
+      <wsdl:output message="tns:TestGetMasterShiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestGetListLO">
+      <wsdl:input message="tns:TestGetListLOSoapIn" />
+      <wsdl:output message="tns:TestGetListLOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestGetProduct">
+      <wsdl:input message="tns:TestGetProductSoapIn" />
+      <wsdl:output message="tns:TestGetProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestReportStock">
+      <wsdl:input message="tns:TestReportStockSoapIn" />
+      <wsdl:output message="tns:TestReportStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOrderBBM">
+      <wsdl:input message="tns:TestOrderBBMSoapIn" />
+      <wsdl:output message="tns:TestOrderBBMSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SVC_MS2MobileSoap" type="tns:SVC_MS2MobileSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendOTP">
+      <soap:operation soapAction="http://tempuri.org/SendOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLO">
+      <soap:operation soapAction="http://tempuri.org/GetListLO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderBBM">
+      <soap:operation soapAction="http://tempuri.org/OrderBBM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterShift">
+      <soap:operation soapAction="http://tempuri.org/GetMasterShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportStock">
+      <soap:operation soapAction="http://tempuri.org/ReportStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://tempuri.org/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestSendOTP">
+      <soap:operation soapAction="http://tempuri.org/TestSendOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestGetMasterShift">
+      <soap:operation soapAction="http://tempuri.org/TestGetMasterShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestGetListLO">
+      <soap:operation soapAction="http://tempuri.org/TestGetListLO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestGetProduct">
+      <soap:operation soapAction="http://tempuri.org/TestGetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestReportStock">
+      <soap:operation soapAction="http://tempuri.org/TestReportStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOrderBBM">
+      <soap:operation soapAction="http://tempuri.org/TestOrderBBM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SVC_MS2MobileSoap12" type="tns:SVC_MS2MobileSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendOTP">
+      <soap12:operation soapAction="http://tempuri.org/SendOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLO">
+      <soap12:operation soapAction="http://tempuri.org/GetListLO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderBBM">
+      <soap12:operation soapAction="http://tempuri.org/OrderBBM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterShift">
+      <soap12:operation soapAction="http://tempuri.org/GetMasterShift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportStock">
+      <soap12:operation soapAction="http://tempuri.org/ReportStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap12:operation soapAction="http://tempuri.org/GetProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestSendOTP">
+      <soap12:operation soapAction="http://tempuri.org/TestSendOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestGetMasterShift">
+      <soap12:operation soapAction="http://tempuri.org/TestGetMasterShift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestGetListLO">
+      <soap12:operation soapAction="http://tempuri.org/TestGetListLO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestGetProduct">
+      <soap12:operation soapAction="http://tempuri.org/TestGetProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestReportStock">
+      <soap12:operation soapAction="http://tempuri.org/TestReportStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOrderBBM">
+      <soap12:operation soapAction="http://tempuri.org/TestOrderBBM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SVC_MS2Mobile">
+    <wsdl:port name="SVC_MS2MobileSoap" binding="tns:SVC_MS2MobileSoap">
+      <soap:address location="http://apps.pertamina.com/svc_ms2mobile/svc_ms2mobile.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SVC_MS2MobileSoap12" binding="tns:SVC_MS2MobileSoap12">
+      <soap12:address location="http://apps.pertamina.com/svc_ms2mobile/svc_ms2mobile.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EReciept</title>
+</head>
+<body>
+    <div>
+        <table width="600" align="center" style="background-color: #fff;border: solid 1px #ccc;">
+            <tr>
+                <td>
+                    <table width="560" align="center">
+                        <tr>
+                            <td style="font-size: 14px;font-family:arial;" colspan="3">
+                                <strong style="color: #777;">{invoice_number}</strong><br>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="10"></td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:arial;">
+                                <div style="font-weight: bold;color: #e40073;">{consumer_name}</div>
+                                <span style="font-size: 14px;color: #777;">{consumer_address} <br>
+                                    {consumer_location} {postal_code} <br> 
+                                    {consumer_mobile}<br><br>
+                                    {order_date} | {order_time}
+                                </span>
+                            </td>
+                            <td width="8%"></td>
+                            <td valign="top" align="right" style="font-family:arial;">
+                                <div style="font-weight: bold;color: #e40073;">{agency_name}</div>
+                                <span style="font-size: 14px;color: #777;">
+                                    {agency_address} <br>
+                                    {agency_location}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="20"></td>
+                        </tr>
+                    </table>
+                    <table width="560" align="center">
+                        <tr>
+                            <th style="font-family:arial;color: #e40073;text-align:left;">Nama Barang</th>
+                            <th style="font-family:arial;color: #e40073;text-align:center;">Jumlah</th>
+                            <th style="font-family:arial;color: #e40073;text-align:right;">Harga Satuan</th>
+                            <th style="font-family:arial;color: #e40073;text-align:right;">Total</th>
+                        </tr>
+                        {products}
+                        
+                        <tr>
+                            <td colspan="4" height="15" style="border-bottom: solid 1px #ccc;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" height="15"></td>
+                        </tr>
+                        
+                        <tr><td colspan="4" height="15" style="border-bottom: solid 1px #ccc;"></td> </tr>
+                        <tr>
+                            <td height="24" style="font-size: 14px;font-family:arial;color: #777;text-align: right;" colspan="2">Jumlah Total Awal (Rp)</td>
+                            <td height="24" style="font-size: 14px;font-family:arial;text-align: right;color: #777;" colspan="2">{grand_total_with_discount}</td>
+                        </tr>
+                        <tr>
+                            <td height="24" style="font-size: 14px;font-family:arial;color: #777;text-align: right;" colspan="2">Jumlah Total Promo (Rp)</td>
+                            <td height="24" style="font-size: 14px;font-family:arial;text-align: right;color: #777;" colspan="2">{grand_discount}</td>
+                        </tr>
+                        <tr>
+                            <td height="24" style="font-size: 14px;font-family:arial;color: #777;text-align: right;" colspan="2">Jumlah Total Akhir (Rp)<br><span class="small" style="font-size:12px;">(Sudah Termasuk PPN 10%)</span></td>
+                            <td height="24" style="font-size: 14px;font-family:arial;text-align: right;color: #777;" colspan="2" valign="top">{grand_total}</td>
+                        </tr>
+                    </table>
+                    <table width="560" align="center">
+                        <tr>
+                            <td colspan="3" height="100"></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 14px;font-family:arial;text-align: center;color: #777;" width="30%">Tanda Terima</td>
+                            <td></td>
+                            <td style="font-size: 14px;font-family:arial;text-align: center;color: #777;" width="30%">Hormat Kami</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" height="20"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+

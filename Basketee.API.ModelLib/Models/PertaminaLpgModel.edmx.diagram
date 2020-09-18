@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="894019c523d14a9892c3db7d765c6c6b" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="PertaminaLpgModel.ActivityLog" Width="1.5" PointX="3" PointY="56.625" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.Agency" Width="1.5" PointX="6" PointY="45.125" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.AgentAdmin" Width="1.5" PointX="11.25" PointY="41.5" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.AgentBoss" Width="1.5" PointX="8.25" PointY="45.25" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.Consumer" Width="1.5" PointX="14.25" PointY="49.625" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.ConsumerAddress" Width="1.5" PointX="14.25" PointY="55.125" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.ConsumerReview" Width="1.5" PointX="24.75" PointY="45.125" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.ConsumerReviewReason" Width="1.5" PointX="22.5" PointY="50.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.ContactInfo" Width="1.5" PointX="3" PointY="52.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.DistributionPoint" Width="1.5" PointX="11.25" PointY="48.5" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.Driver" Width="1.5" PointX="19.5" PointY="47" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.DriverNotificationLog" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.InvoiceNumber" Width="1.5" PointX="8.25" PointY="63.375" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MDeliverySlot" Width="1.5" PointX="14.25" PointY="29.5" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MDeliveryStatu" Width="1.5" PointX="19.5" PointY="53.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MFaq" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MFunctionality" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MModule" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MOrderStatu" Width="1.5" PointX="14.25" PointY="32.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MRegion" Width="1.5" PointX="3.75" PointY="45.5" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.MSuperUserType" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.NotificationLog" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.OneTimePwd" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.Order" Width="1.5" PointX="16.5" PointY="40.5" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.OrderAllocationLog" Width="1.5" PointX="18.75" PointY="60.625" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.OrderDelivery" Width="1.5" PointX="21.75" PointY="45.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.OrderDetail" Width="1.5" PointX="18.75" PointY="37.375" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.OrderPrdocuctExchange" Width="1.5" PointX="21.75" PointY="40.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.Product" Width="1.5" PointX="3" PointY="36.75" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.ProductExchange" Width="1.5" PointX="5.25" PointY="40.25" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.PromoBanner" Width="1.5" PointX="3" PointY="48.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.PromoInfo" Width="1.5" PointX="3" PointY="32.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.Reminder" Width="1.5" PointX="8.25" PointY="40.375" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.SuperAdmin" Width="1.5" PointX="0.75" PointY="39.375" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.TeleCustomer" Width="1.5" PointX="18.75" PointY="42.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.TeleOrder" Width="1.5" PointX="13.5" PointY="40.5" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.TeleOrderDelivery" Width="1.5" PointX="24.75" PointY="39.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.TeleOrderDetail" Width="1.5" PointX="21.75" PointY="35.375" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.TeleOrderPrdocuctExchange" Width="1.5" PointX="15.75" PointY="35.875" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.AccessControl" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="PertaminaLpgModel.temp" Width="1.5" PointX="7.75" PointY="6.75" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ActivityLog_SuperAdmin" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Agency_RegionID" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Agency_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Agency_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AgentAdmin_Agency" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AgentBoss_Agency" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_DistributionPoint_Agency" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Driver_Agency" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_InvoiceNumbers_Agency" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AgentAdmin_DistributionPoint" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AgentAdmin_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Order_AgentAdmin" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderDelivery_AgentAdmin" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleCustomer_AgentAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrder_AgentAdmin" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrder_AgentAdmin_Created" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderDelivery_AgentAdmin" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AgentBoss_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ConsumerAddress_Consumer" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ConsumerReview_Consumer" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Order_Consumer" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Order_ConsumerAddress" />
+        <AssociationConnector Association="PertaminaLpgModel.ConsumerReview_ReasonID_FK" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ConsumerReview_Driver" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ConsumerReview_Order" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ContactInfo_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ContactInfo_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_DistributionPoint_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_DistributionPoint_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Driver_DistributionPoint" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Driver_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Driver_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Order_Driver" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderDelivery_Driver" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrder_Driver" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderDelivery_Driver" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Order_MDeliverySlot" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrder_MDeliverySlot" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderDelivery_MDeliveryStatus" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderDelivery_MDeliveryStatus" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AccessControl_MFunctionalities" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_MFunctionalities_MModules" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AccessControl_MModules" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Order_MOrderStatus" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrder_MOrderStatus" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_AccessControl_MSuperUserTypes" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderAllocationLog_Order" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderDelivery_Order" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderDetails_Order" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderPrdocuctExchange_Order" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderDetails_Product" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_OrderPrdocuctExchange_Product" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Product_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Product_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ProductExchange_Product" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Reminder_Product" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderDetails_Product" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderPrdocuctExchange_Product" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ProductExchange_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_ProductExchange_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_PromoBanner_PromoBanner_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_PromoBanner_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_PromoInfo_SuperAdmin_create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_PromoInfo_SuperAdmin_update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Reminder_SuperAdmin_Create" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_Reminder_SuperAdmin_Update" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleCustomer_TeleOrder" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderDelivery_TeleOrder" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderDetails_TeleOrder" />
+        <AssociationConnector Association="PertaminaLpgModel.FK_TeleOrderPrdocuctExchange_TeleOrder" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
