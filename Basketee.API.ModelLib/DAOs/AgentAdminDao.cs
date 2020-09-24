@@ -9,7 +9,7 @@ namespace Basketee.API.Services
     {
         public AgentAdmin FindByMobileNumber(string mobileNumber)
         {
-            var admins = _context.AgentAdmins.Where(a =>a.StatusId && a.MobileNumber.Replace("+62", "") == mobileNumber.Replace("+62", ""));
+            var admins = _context.AgentAdmins.Where(a =>a.StatusId && a.MobileNumber.Replace("+968", "") == mobileNumber.Replace("+968", ""));
             if (admins.Count() > 0)
             {
                 return admins.Single();

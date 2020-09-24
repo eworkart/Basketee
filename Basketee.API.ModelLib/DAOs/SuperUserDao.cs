@@ -9,7 +9,7 @@ namespace Basketee.API.DAOs
     {
         public SuperAdmin FindByMobileNumber(string mobileNumber)
         {
-            var boss = _context.SuperAdmins.Where(a =>a.StatusID && a.MobileNum.Replace("+62", "")  == mobileNumber.Replace("+62", ""));
+            var boss = _context.SuperAdmins.Where(a =>a.StatusID && a.MobileNum.Replace("+968", "")  == mobileNumber.Replace("+968", ""));
             if (boss.Count() > 0)
             {
                 return boss.Single();

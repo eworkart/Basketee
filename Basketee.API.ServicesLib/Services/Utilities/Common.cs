@@ -45,7 +45,7 @@ namespace Basketee.API.Services
             {
                 return null;
             }
-                if (mobileNumber.StartsWith("+91"))
+                if (mobileNumber.StartsWith("+968"))
                     return mobileNumber;
                 else
                 {
@@ -53,7 +53,7 @@ namespace Basketee.API.Services
                     {
                         mobileNumber = mobileNumber.Remove(0, 1);
                     }
-                    return mobileNumber.Insert(0, "+91");
+                    return mobileNumber.Insert(0, "+968");
                 }
             
         }

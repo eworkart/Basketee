@@ -12,7 +12,7 @@ namespace Basketee.API.DAOs
     {
         public AgentBoss FindByMobileNumber(string mobileNumber)
         {
-            var agentBoss = _context.AgentBosses.Where(a =>a.StatusId && a.MobileNumber.Replace("+62", "") == mobileNumber.Replace("+62", ""));
+            var agentBoss = _context.AgentBosses.Where(a =>a.StatusId && a.MobileNumber.Replace("+968", "") == mobileNumber.Replace("+968", ""));
             if (agentBoss.Count() > 0)
             {
                 return agentBoss.Single();

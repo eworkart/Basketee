@@ -15,7 +15,7 @@ namespace Basketee.API.DAOs
         }
         public Driver FindByMobileNumber(string mobileNumber)
         {
-            var drvs = _context.Drivers.Where(c => c.MobileNumber.Replace("+62", "")  == mobileNumber.Replace("+62", ""));
+            var drvs = _context.Drivers.Where(c => c.MobileNumber.Replace("+968", "")  == mobileNumber.Replace("+968", ""));
             if (drvs.Count() > 0)
             {
                 return drvs.Single();
@@ -26,7 +26,7 @@ namespace Basketee.API.DAOs
 
         public Driver FindByMobileNumberAndPassword(string mobileNumber, string passWord)
         {
-            var drvs = _context.Drivers.Where(c =>c.StatusId && c.MobileNumber.Replace("+62", "") == mobileNumber.Replace("+62", "") && c.Password == passWord);
+            var drvs = _context.Drivers.Where(c =>c.StatusId && c.MobileNumber.Replace("+968", "") == mobileNumber.Replace("+968", "") && c.Password == passWord);
             if (drvs.Count() > 0)
             {
                 return drvs.Single();
