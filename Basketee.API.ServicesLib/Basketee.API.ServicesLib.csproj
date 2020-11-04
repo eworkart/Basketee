@@ -40,6 +40,9 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=106.8.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.5\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -102,6 +105,7 @@
     <Compile Include="DTOs\Agent\TestPushNotificationRequest.cs" />
     <Compile Include="DTOs\Agent\UserLoginDto.cs" />
     <Compile Include="DTOs\AuthBase.cs" />
+    <Compile Include="DTOs\Common\User.cs" />
     <Compile Include="DTOs\Driver\ChangePasswordDriverRequest.cs" />
     <Compile Include="DTOs\Driver\CheckOtpRequest.cs" />
     <Compile Include="DTOs\Driver\DriverDetailListDto.cs" />
@@ -383,6 +387,7 @@
     <Compile Include="Services\AgencyService.cs" />
     <Compile Include="Services\AgentAdminServices.cs" />
     <Compile Include="Services\AgentBossServices.cs" />
+    <Compile Include="Services\CommonUserServices.cs" />
     <Compile Include="Services\ContactServices.cs" />
     <Compile Include="Services\DistrictServices.cs" />
     <Compile Include="Services\DriverServices.cs" />
@@ -417,6 +422,7 @@
     <Compile Include="Services\TeleOrderServices.cs" />
     <Compile Include="Services\TimeslotService.cs" />
     <Compile Include="Services\TokenGenerator.cs" />
+    <Compile Include="Services\UploadServices.cs" />
     <Compile Include="Services\UserServices.cs" />
     <Compile Include="Services\Utilities\Common.cs" />
     <Compile Include="Web References\PertaminaServices\Reference.cs" />
@@ -477,6 +483,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

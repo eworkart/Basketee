@@ -163,10 +163,34 @@ namespace Basketee.API.Controllers
 
         [HttpPost]
         [ActionName("change_profilephoto_user")]
-        public NegotiatedContentResult<ResponseDto> PostChangeProfilePhoto([FromBody]ChangeProfilePhotoRequest request)
+        public NegotiatedContentResult<ResponseDto> PostChangeProfilePhoto()
         {
-            ResponseDto resp = _userServices.ChangeProfilePhoto(request);
-            return Content(HttpStatusCode.OK, resp);
+            return Content(HttpStatusCode.OK, ProcessProfileData(HttpContext.Current.Request, (int)UserType.Consumer));
+        }
+
+        [NonAction]
+        private ResponseDto ProcessProfileData(HttpRequest httpRequest, int userType)
+        {
+            ChangeProfilePhotoRequest request = new ChangeProfilePhotoRequest();
+            ResponseDto resp = null;
+            UploadServices upImage = new UploadServices();
+            var statusMessage = upImage.UploadProfilePicture(httpRequest, userType);
+            if (statusMessage.ContainsKey("success"))
+            {
+                request.profile_image = statusMessage["message"].ToString();
+                request.user_id = statusMessage["user_id"].ToInt();
+                request.auth_token = statusMessage["auth_token"].ToString();
+                resp = _userServices.ChangeProfilePhoto(request);
+            }
+            else
+            {
+                resp = new ResponseDto();
+                resp.code = 0;
+                resp.has_resource = 0;
+                resp.message = statusMessage["message"].ToString();
+            }
+
+            return resp;
         }
 
         [HttpPost]

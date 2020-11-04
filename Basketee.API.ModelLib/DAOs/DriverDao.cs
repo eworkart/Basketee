@@ -60,6 +60,11 @@ namespace Basketee.API.DAOs
             List<DriversForAdmin> drivers = _context.GetAllDriversForAgentAdmin(agentAdminId).Select(x => new DriversForAdmin() { DriverName = x.DriverName,DrvrID = x.DrvrID }).ToList();
             return drivers;            
         }
+
+        public List<Driver> GetDrivers()
+        {
+            return _context.Drivers.ToList();
+        }
     }
 
     public class DriversForAdmin

@@ -1,4 +1,5 @@
 ﻿using Basketee.API.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Basketee.API.DAOs
@@ -99,6 +100,20 @@ namespace Basketee.API.DAOs
         public ConsumerAddress FindDefaultAddressForUser(int addressID)
         {
             return _context.ConsumerAddresses.Where(a => a.AddrID  == addressID && a.IsDefault && a.StatusID == 1).FirstOrDefault();
+        }
+
+        public List<Consumer> GetConsumers(bool withDetails = false)
+        {
+            if (withDetails)
+            {
+                var consumers = _context.Consumers.Include("ConsumerAddresses").Where(c => c.StatusID == 1);
+                if (consumers.Count() > 0)
+                {
+                    return consumers.ToList();
+                }
+                return null;
+            }
+            return _context.Consumers.ToList();
         }
     }
 }
